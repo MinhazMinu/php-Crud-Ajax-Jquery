@@ -64,10 +64,10 @@
             url: url,
             data: data,
             dataType: 'json',
-    
-            cache: false,
-            contentType: false,
-            processData: false
+
+            // cache: false,
+            // contentType: false,
+            // processData: false
 
         }).done(function(resp) {
             console.log(resp);
@@ -76,12 +76,11 @@
             } else {
                 alert(resp.msg);
                 $('#addPostModel').modal('hide');
+                location.reload(this);
             }
 
         }).fail(function() {
             alert("Error from server");
         });
     }
-
-    
 </script>
